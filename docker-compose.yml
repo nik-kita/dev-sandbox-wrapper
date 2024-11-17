@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: ${APP_CONTAINER_NAME}
+    build: .
+    working_dir: /root
+    volumes:
+      - ./app:/root/app
+    tty: true
+    command: bash
+    ports:
+      - "4000:3000"
